@@ -30,7 +30,7 @@ public class OfferPagaSteps
 		
 		testContextSetup.genericUtils.switchWindowToChild();
 	}
-	@And("user searched for {string} shortname in offers page to check if product exist with same name")
+	@Then("user searched for (.+) shortname in offers page$")
 	public void user_searched_for_shortname_in_offers_page_to_check_if_product_exist_with_same_name(String shortName) throws InterruptedException 
 	{
 		OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
@@ -43,7 +43,7 @@ public class OfferPagaSteps
 		System.out.println(offerPageProductName + " is extracted from Offer page");
 	}
 	
-	@Then("validate product name in offers page matches with Landing Page")
+	@And("validate product name in offers page matches with Landing Page")
 	public void validate_product_name_in_offers_page_matches_with_landing_page() {
 		Assert.assertEquals(offerPageProductName, testContextSetup.landingPageProductName);
 	}
