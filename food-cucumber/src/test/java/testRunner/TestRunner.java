@@ -8,7 +8,8 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/features",
-		glue = "stepDefinitions"
+		glue = "stepDefinitions",
+		tags = "@Checkout"
 		)
 public class TestRunner {
 

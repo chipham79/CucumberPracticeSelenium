@@ -11,7 +11,7 @@ public class OffersPage
 		this.driver = driver;
 	}
 	
-	private By search = By.cssSelector("search-field");
+	private By search = By.id("search-field");
 	private By productName = By.cssSelector("tbody tr td:nth-child(1)");
 	
 	public void searchItem(String name)
