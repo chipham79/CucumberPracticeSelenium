@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "src/test/java/features",
 		glue = "stepDefinitions",
-		tags = "@Checkout"
-		)
+		tags = "@Checkout",
+		plugin = {"html:target/cucumber-report.html", "json:target/cucumber.json",  "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 public class TestRunner {
-
+	
 }
