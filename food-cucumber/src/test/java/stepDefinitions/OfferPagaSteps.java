@@ -1,17 +1,13 @@
 package stepDefinitions;
 
-import java.util.Iterator;
-import java.util.Set;
-
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
+
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjects.LandingPage;
 import pageObjects.OffersPage;
 import pageObjects.PageObjectManager;
-import utils.GenericUtils;
 import utils.TestContextSetup;
 
 public class OfferPagaSteps 
@@ -30,7 +26,7 @@ public class OfferPagaSteps
 		
 		testContextSetup.genericUtils.switchWindowToChild();
 	}
-	@Then("user searched for (.+) shortname in offers page$")
+	@And("user searched for {string} shortname in offers page to check if product exist with same name")
 	public void user_searched_for_shortname_in_offers_page_to_check_if_product_exist_with_same_name(String shortName) throws InterruptedException 
 	{
 		OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
