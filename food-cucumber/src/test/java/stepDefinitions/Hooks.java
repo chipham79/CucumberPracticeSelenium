@@ -17,13 +17,14 @@ public class Hooks
 {
 	TestContextSetup testContextSetup;
 	File sourcePath;
+	
 	public Hooks(TestContextSetup testContextSetup) 
 	{
 		this.testContextSetup = testContextSetup;
 	}
 	
 	@After
-	public void AfterScenario() 
+	public void AfterScenario() throws IOException 
 	{
 		testContextSetup.testBase.WebDriverManage().quit();
 	}
