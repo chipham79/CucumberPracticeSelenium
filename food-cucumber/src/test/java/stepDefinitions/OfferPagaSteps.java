@@ -1,17 +1,13 @@
 package stepDefinitions;
 
-import java.util.Iterator;
-import java.util.Set;
-
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
+
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjects.LandingPage;
 import pageObjects.OffersPage;
 import pageObjects.PageObjectManager;
-import utils.GenericUtils;
 import utils.TestContextSetup;
 
 public class OfferPagaSteps 
