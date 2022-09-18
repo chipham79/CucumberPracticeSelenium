@@ -1,5 +1,6 @@
 Feature: Search and Place the order for Products
 
+@PlaceOrder
 Scenario: Search Experience for product search in both home and offers page
 	Given User is on GreenCart Lading Page
 	When user search with Shortname "Tom" and extracted actual name of product
