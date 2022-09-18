@@ -12,4 +12,4 @@ Feature: Place the order for Products
 	Examples:
 	|Name |
 	|Tom	|
-	|Beet	|
+	|Test	|
