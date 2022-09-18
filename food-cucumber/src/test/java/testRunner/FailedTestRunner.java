@@ -7,13 +7,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src/test/java/features",
+		features = "@target/failed_scenarios.txt",
 		glue = "stepDefinitions",
-		tags = "@Checkout",
 		plugin = {"html:target/cucumber-report.html", "json:target/cucumber.json",  
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				"rerun:target/failed_scenarios.txt"
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 		})
-public class TestRunner {
-	
+public class FailedTestRunner {
+
 }
