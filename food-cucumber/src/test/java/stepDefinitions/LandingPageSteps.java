@@ -31,10 +31,9 @@ public class LandingPageSteps
 		Assert.assertTrue(titlePage.contains("GreenKart"));
 	
 	}
-	
-	@When("user search with Shortname {string} and extracted actual name of product")
-	public void user_search_with_shortname_and_extracted_actual_name_of_product(String shortName) throws InterruptedException 
-	{		
+		
+	@When("user search with Shortname (.+) and extracted actual name of product")
+	public void user_search_with_shortname_tom_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
 		landingPage.searchItem(shortName);
 		
 		Thread.sleep(2000);

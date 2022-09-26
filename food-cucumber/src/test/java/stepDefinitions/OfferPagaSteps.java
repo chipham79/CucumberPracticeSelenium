@@ -26,7 +26,7 @@ public class OfferPagaSteps
 		
 		testContextSetup.genericUtils.switchWindowToChild();
 	}
-	@And("user searched for {string} shortname in offers page to check if product exist with same name")
+	@And("user searched for (.*) shortname in offers page to check if product exist with same name$")
 	public void user_searched_for_shortname_in_offers_page_to_check_if_product_exist_with_same_name(String shortName) throws InterruptedException 
 	{
 		OffersPage offersPage = testContextSetup.pageObjectManager.getOffersPage();
