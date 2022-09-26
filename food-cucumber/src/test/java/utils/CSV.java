@@ -1,0 +1,38 @@
+package utils;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CSV 
+{
+	public static List<String[]> get(String filename)
+	{
+		List<String[]> data = new ArrayList<>();
+		String row;
+		try 
+		{
+			BufferedReader br = new BufferedReader(new FileReader(filename));
+			//Read data as long as it's not empty
+			//Parse data by comma using split() method
+			// Place into a temp array, then add to list
+			while ( ( row = br.readLine() ) != null ) 
+			{
+				String[] line = row.split(",");
+				data.add(line);
+			}
+		}
+		catch (FileNotFoundException e) {
+			System.out.println("ERROR: File not found: " + filename);
+		}
+		catch (IOException e) {
+			System.out.println("ERROR: Could not read file name: " + filename);
+		}
+		
+		return data;
+	}
+
+}
